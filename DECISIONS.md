@@ -2,6 +2,16 @@
 
 Append only. Numbered `CW-nn` (from the first name, crimewave). Newest first.
 
+## CW-08 · the app lives in /Applications, one file starts the flow · 19 nov 2026
+
+**Ruled by Nevil, 19 nov 2026:** "Yes, move it · and test · and pack it all up · and retest · so that it is a single click complete flow".
+
+**What it means here.** The script writes `/Applications/Road Rash.app`. A user who cannot write there gets `~/Applications`. An app this script wrote in the old place is deleted. `CARNIVAL.command` is the one file to double-click; it runs `carnival.sh` in Terminal.
+
+**What stays with the person, Claude's line.** The y/n and the Steam sign-in (CW-03, CW-04). The double-click does not remove them.
+
+**Flagged for record only.** `game_running` read the full command line, so a shell line that held the game's name counted as the game. It now reads the program name only.
+
 ## CW-07 · the name is CARNIVAL, the repo is private on GitHub · 19 nov 2026
 
 **Ruled by Nevil, 19 nov 2026:** "push it to github, private srill · name: CARNIVAL".

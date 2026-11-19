@@ -1,14 +1,19 @@
 #!/bin/zsh
 # CARNIVAL · Road Rash 30th Anniversary Edition (Steam, Windows) on an Apple silicon Mac
 # MIT · LICENSES/MIT.txt · written by Claude (AI) on Nevil Hitesh's ask · 19 nov 2026
-# use: ./carnival.sh            one flow: tools, game, app, play
+# use: double-click CARNIVAL.command, or
+#      ./carnival.sh            one flow: tools, game, app, play
 #      ./carnival.sh play | update | check | remove
 
 set -u
 SELF="${0:A}"
 
 ROOT="${CARNIVAL_ROOT:-$HOME/.carnival}"
-APPDIR="${CARNIVAL_APP:-$HOME/Applications/Road Rash.app}"
+# the app goes in /Applications. a Mac user who cannot write there gets ~/Applications.
+OLDAPP="$HOME/Applications/Road Rash.app"
+if [[ -n "${CARNIVAL_APP:-}" ]]; then APPDIR="$CARNIVAL_APP"
+elif [[ -w /Applications ]]; then APPDIR="/Applications/Road Rash.app"
+else APPDIR="$OLDAPP"; fi
 FW="$ROOT/Frameworks"
 WINE="$ROOT/wine"
 PFX="$ROOT/prefix"
@@ -34,7 +39,8 @@ wine_env() {
   export WINEMSYNC=1 WINEESYNC=1 WINEDEBUG=-all
 }
 w() { "$WINE/bin/wine" "$@"; }
-game_running() { pgrep -f 'RoadRash95.exe' >/dev/null; }
+# reads the program name only. a shell line that holds the name does not count.
+game_running() { ps -axo comm= | grep -q 'RoadRash95\.exe$'; }
 
 fetch() { # url sha file
   curl -fL --proto '=https' --progress-bar -o "$3" "$1" || stop "download failed · $1"
@@ -152,6 +158,10 @@ EOF
 </dict></plist>
 EOF
   icon
+  # an app this script wrote in the old place goes. no other app is touched.
+  if [[ "$OLDAPP" != "$APPDIR" ]] && grep -q 'local.carnival.roadrash' "$OLDAPP/Contents/Info.plist" 2>/dev/null; then
+    rm -rf "$OLDAPP"
+  fi
 }
 
 # the icon comes from the person's own game files. the repo holds no icon.

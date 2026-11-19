@@ -23,4 +23,4 @@ A recipe that runs Road Rash 30th Anniversary Edition (Steam, Windows) on an App
 | thing | value |
 |---|---|
 | the one flow's folder | `~/.carnival` (engine, libraries, prefix, game, SteamCMD, a copy of the script) |
-| the app | `~/Applications/Road Rash.app` → `~/.carnival/carnival.sh play` |
+| the app | `/Applications/Road Rash.app` → `~/.carnival/carnival.sh play` |

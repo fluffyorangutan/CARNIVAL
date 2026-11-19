@@ -1,10 +1,12 @@
 # CARNIVAL
 
-Road Rash 30th Anniversary Edition is a Windows game on Steam. One command puts it on an Apple silicon Mac as an app.
+Road Rash 30th Anniversary Edition is a Windows game on Steam. One double-click puts it on an Apple silicon Mac as an app.
 
 **You bring the game.** Buy it on Steam: https://store.steampowered.com/app/2448570/ . The repo holds no game files, no Steam files and no sign-in.
 
 ## use
+
+Double-click `CARNIVAL.command`. Terminal opens and runs the flow. The same from a shell:
 
 ```bash
 ./carnival.sh
@@ -17,7 +19,7 @@ It asks two things. All other steps run by themselves.
 | one y/n, after a list of each download with maker, licence and link | first run |
 | your Steam sign-in name, then password and code from SteamCMD | first run · later runs use SteamCMD's saved sign-in |
 
-Then it makes `~/Applications/Road Rash.app` and opens the game. After that, open the app.
+Then it makes `/Applications/Road Rash.app` and opens the game. After that, open the app. A Mac user who cannot write to `/Applications` gets `~/Applications/Road Rash.app`.
 
 | command | what |
 |---|---|
@@ -55,6 +57,8 @@ The Steam app is not installed and does not run. The game starts without it.
 | sign-in | SteamCMD used a saved sign-in · the password and code path is SteamCMD's own, not re-tested in this flow |
 | the app | starts the game process, no Steam process |
 | picture, sound, full screen from the new app | yes · Nevil, 19 nov 2026 |
+| the app in `/Applications` | the flow wrote it and the game started from it · 19 nov 2026 |
+| `CARNIVAL.command` | ran from a shell on a Mac with all parts in place · a double-click in Finder and a run from an empty folder are owed |
 | a second Mac | owed |
 
 ## why each setting is there
@@ -72,6 +76,7 @@ The first working setup used the Steam app inside a Sikarugir wrapper. It needed
 
 ## limits
 
+- **A downloaded copy.** macOS can block a `.command` file that came from a browser download. Not tested. `./carnival.sh` in Terminal is the other way in.
 - **Updates.** Run `./carnival.sh update`.
 - **Steam features.** The Steam app does not run, so the Steam overlay, cloud saves and achievements are not expected to work. Not checked.
 - **Videos.** The intro and cut-scene videos are not checked.
