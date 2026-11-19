@@ -11,7 +11,8 @@ A recipe that runs Road Rash 30th Anniversary Edition (Steam, Windows) on an App
 ## laws
 
 - **Never commit the wrapper,** game files, Steam files or a sign-in. The repo holds text only.
-- **Each download asks first.** A new download in the script gets its own y/n line with maker, licence and link.
+- **The downloads ask first.** One y/n after a list. A new download gets its own row in that list with maker, licence and link.
+- **A script never types a password.** The Steam sign-in is the person's, in SteamCMD.
 - **Each claim says if it is tested.** The README's `tested on` and `limits` tables are the record. Update them with every change.
 - **Never kill a process while Nevil plays.** Two stops on 19 nov 2026 closed his sign-in and his game.
 - **Not pushed.** A push to a public remote is Nevil's call, each time.
@@ -21,6 +22,6 @@ A recipe that runs Road Rash 30th Anniversary Edition (Steam, Windows) on an App
 
 | thing | value |
 |---|---|
-| wrapper | `~/Applications/Sikarugir/crimewave.app` |
-| SteamCMD | `~/steamcmd` |
-| launcher | `~/Applications/Road Rash.app` → `~/steamcmd/play_roadrash.sh` (made before this repo) |
+| the one flow's folder | `~/.crimewave` (engine, libraries, prefix, game, SteamCMD, a copy of the script) |
+| the app | `~/Applications/Road Rash.app` → `~/.crimewave/crimewave.sh play` |
+| the first way, still on disk | `~/Applications/Sikarugir/crimewave.app` · `crimewave2.app` · `~/steamcmd` |
