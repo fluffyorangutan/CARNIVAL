@@ -58,7 +58,7 @@ The Steam app is not installed and does not run. The game starts without it.
 | the app | starts the game process, no Steam process |
 | picture, sound, full screen from the new app | yes · Nevil, 19 nov 2026 |
 | the app in `/Applications` | the flow wrote it and the game started from it · 19 nov 2026 |
-| `CARNIVAL.command` | ran from a shell on a Mac with all parts in place · a double-click in Finder and a run from an empty folder are owed |
+| `CARNIVAL.command` from an empty folder | the y/n, the downloads of step 2 and 3, step 4 and the sign-in passed · the run was stopped in the game download · the rest is owed |
 | a second Mac | owed |
 
 ## why each setting is there

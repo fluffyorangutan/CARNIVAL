@@ -8,7 +8,7 @@
 |---|---|
 | `./carnival.sh` from an empty `~/.carnival` | ran with no clicks on the test Mac · 19 nov 2026 |
 | `/Applications/Road Rash.app` | the flow wrote it and the game started from it · 19 nov 2026 · icon from the game's exe |
-| `CARNIVAL.command` | ran from a shell, all parts in place · owed · a double-click in Finder · owed · a run from an empty folder |
+| `CARNIVAL.command` from an empty folder | opened as a double-click does, 19 nov 2026, 23:24 · the y/n, libraries, engine, Windows folder, SteamCMD and the sign-in passed · stopped by Nevil in the game download, 3.3 GB in · owed · the end of the download, the app, the game start |
 | picture, sound, full screen from the new app | yes · Nevil, 19 nov 2026 |
 | `check` · a "no" at the y/n | tested |
 | `update` · `remove` · the Rosetta line · the password and code path | not tested |
@@ -16,7 +16,7 @@
 
 ## next
 
-- The retest from an empty folder: Nevil quits the game, `~/.carnival` moves aside, a double-click on `CARNIVAL.command` runs all steps.
+- Finish the retest, on Nevil's word ("test later, need internet", 19 nov 2026). The half-done run is in `~/.carnival.partial`. Steps: game closed · `mv ~/.carnival ~/.carnival.keep` · move `/Applications/Road Rash.app` into the keep folder · `mv ~/.carnival.partial ~/.carnival` · `open CARNIVAL.command`. After a pass, ask before the keep folder is deleted.
 - A second Mac.
 
 ## blocked on nevil
