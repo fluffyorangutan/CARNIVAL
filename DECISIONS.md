@@ -2,6 +2,10 @@
 
 Append only. Numbered `CW-nn`. Newest first.
 
+## CW-05 · MIT, ruled · 19 nov 2026
+
+**Ruled by Nevil, 19 nov 2026:** "MIT yes". CW-02 was Claude's pick; it is now his ruling.
+
 ## CW-04 · one flow, no clicks, no Steam app · 19 nov 2026
 
 **His words, 19 nov 2026.** "this needs to work automatcally, without human intervension · from click to opening roadrash on steam · one streamline flow" · "to having roadrash added as an app on their mac whcih opens in full screen, and not have to see any of the background works or see the steam logo even".

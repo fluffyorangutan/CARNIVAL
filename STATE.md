@@ -22,7 +22,6 @@
 
 | # | thing | what is needed |
 |---|---|---|
-| 1 | the licence | MIT is Claude's pick (CW-02). His yes or another licence. |
 | 2 | going public | his word to make a GitHub repo and push. |
 | 3 | the repo name | `crimewave` is his wrapper name. His yes or another name. |
 | 4 | the old setup | `~/Applications/Sikarugir/crimewave.app` and `crimewave2.app`, `~/steamcmd`, Sikarugir Creator. Keep or delete, his call. About 4 GB for the first wrapper. |
