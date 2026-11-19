@@ -1,35 +1,43 @@
 # state · CARNIVAL
 
-> Last written 19 nov 2026 (the app in /Applications, `CARNIVAL.command`, CW-08). Before that 19 nov 2026 (named CARNIVAL, pushed private, CW-07).
+> Last written 20 nov 2026 (the review fixes CW-09, the small points and `--from` CW-10, the live rebuild). Before that 19 nov 2026 (CW-08).
 
 ## now
 
 | thing | status |
 |---|---|
-| `./carnival.sh` from an empty `~/.carnival` | ran with no clicks on the test Mac · 19 nov 2026 |
-| `/Applications/Road Rash.app` | the flow wrote it and the game started from it · 19 nov 2026 · icon from the game's exe |
-| `CARNIVAL.command` from an empty folder | opened as a double-click does, 19 nov 2026, 23:24 · the y/n, libraries, engine, Windows folder, SteamCMD and the sign-in passed · stopped by Nevil in the game download, 3.3 GB in · owed · the end of the download, the app, the game start |
-| picture, sound, full screen from the new app | yes · Nevil, 19 nov 2026 |
-| `check` · a "no" at the y/n | tested |
-| `update` · `remove` · the Rosetta line · the password and code path | not tested |
-| remote | GitHub · private · `CARNIVAL` |
+| `/Applications/Road Rash.app` | rebuilt with the new script · 20 nov 2026 · started the game process in 7 s, then closed by Claude for the test · ready to play |
+| `~/.carnival` | every `check` row yes · engine and libraries adopted (no download) · Windows folder set again · 20 nov 2026 |
+| the review fixes (CW-09, CW-10) | 5 skeptics, 4 judges, 112 tests, then a 24-check gate in scratch: all passed · 20 nov 2026 |
+| a flow from an empty folder | passed in scratch with the real downloads and `--from` · 171 s · the Steam download itself not run |
+| `--from FOLDER` | tested from the live `~/.carnival` · 20 nov 2026 |
+| picture, sound, full screen | yes · Nevil, 19 nov 2026 · not seen again after the rebuild · owed · his first click |
+| `update` with the password and code | owed · the new SteamCMD home is empty, so the next `update` asks for both once |
+| a Mac without developer tools | simulated only |
+| remote | GitHub · private · `CARNIVAL` · the CW-09 and CW-10 commit is local, not pushed |
 
 ## next
 
-- Finish the retest, on Nevil's word ("test later, need internet", 19 nov 2026). The half-done run is in `~/.carnival.partial`. Steps: game closed · `mv ~/.carnival ~/.carnival.keep` · move `/Applications/Road Rash.app` into the keep folder · `mv ~/.carnival.partial ~/.carnival` · `open CARNIVAL.command`. After a pass, ask before the keep folder is deleted.
-- A second Mac.
+- Nevil: open Road Rash from Applications. Say if the picture, sound and full screen still hold.
+- `~/.carnival.partial` (3.3 GB, the cut download of 19 nov) is no longer needed: `--from` covers the from-empty test. Delete it on his word.
+- The old sign-in in `~/Library/Application Support/Steam` (SteamCMD's, from before CW-09). Delete it on his word.
+- Push to GitHub on his word.
+- A second Mac: `./carnival.sh --from` a copy of `~/.carnival` on a drive, or the Steam sign-in.
 
 ## blocked on nevil
 
 | # | thing | what is needed |
 |---|---|---|
 | 1 | going public | the repo is private on GitHub. His word to make it public. |
+| 2 | two old folders | `~/.carnival.partial` and `~/Library/Application Support/Steam`: delete or keep |
 
 ## handoff notes
 
 - Wine commands need the variables in `wine_env`. `nohup` strips the `DYLD` one.
 - In zsh, `$0` inside a function is the function's name. The script reads its own path once, at the top, as `SELF`.
-- `game_running` matches any `RoadRash95.exe`, from this folder or from an old wrapper.
-- Making a Sikarugir wrapper waits while another wrapper runs (seen 19 nov 2026, 32 minutes). The one flow does not use the Creator.
-- The test Mac moved from `~/.crimewave` to `~/.carnival` on 19 nov 2026. The app start that looked dead after the move was the check itself: the test line held the game's name, and `game_running` read it as the game. Fixed in CW-08.
+- `game_running` reads `ps -o comm`. This engine starts each Windows program from `winetemp-*/<File>.exe`, so the name is the exe's, capitals kept (tested 20 nov 2026).
+- SteamCMD obeys `HOME`. The script runs it with `HOME=~/.carnival/steamhome`.
+- The live game folder is `drive_c/games/roadrash` on disk (lower case); APFS ignores case, so `Games/RoadRash` works.
+- Test only in scratch: `HOME`, `CARNIVAL_ROOT` and `CARNIVAL_APP` all in scratch, and a stub `open` first in `PATH`. A folder with files and no `.consent` is refused, so give a test folder a `.consent`.
+- A backup of the live registry files and the old app, from before the rebuild, is in Claude's scratchpad (`live_backup`). A reboot clears it.
 - In a test line, never write the game's exe name in full. Use a pattern such as `roadrash9[5]`.

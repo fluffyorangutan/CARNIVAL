@@ -5,7 +5,7 @@
 | what | who | licence |
 |---|---|---|
 | the idea, the test Mac, every decision | Nevil Hitesh | MIT · [LICENSES/MIT.txt](LICENSES/MIT.txt) |
-| `carnival.sh`, `icon.py`, the README, this file, the project files | written by Claude (AI: Opus 5.5 and Fable 5.2, Anthropic) on his ask · 19 nov 2026 | MIT |
+| `carnival.sh`, `icon.py`, the README, this file, the project files | written by Claude (AI: Opus 5.5 and Fable 5.2, Anthropic) on his ask · 19–20 nov 2026 | MIT |
 
 ## taken in
 
@@ -32,4 +32,5 @@ Nothing is copied into this repo. The script downloads each item on the person's
 | fix | source |
 |---|---|
 | all four in the README table | found on the test Mac, 19 nov 2026, from Wine's and Steam's own logs |
+| the seven review fixes (CW-09) | a code review on 19 nov 2026, each fix tested on the test Mac in scratch folders, 20 nov 2026 |
 | Windows 7 against Steam error 0x3008 (the first way only) | a user report on the CodeWeavers forum · https://www.codeweavers.com/compatibility/crossover/forum/steam?msg=363588 |

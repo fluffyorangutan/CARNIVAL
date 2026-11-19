@@ -2,6 +2,34 @@
 
 Append only. Numbered `CW-nn` (from the first name, crimewave). Newest first.
 
+## CW-10 · the small points, the judges' finds, and --from · 20 nov 2026
+
+**Ruled by Nevil, 20 nov 2026:** "also fix the small ones" · "yes build the --from option too" · "you have bypass permissions on so just go ahead and do all the tests you need".
+
+**What it means here.**
+- `Y` and `Yes` count as yes. Apple silicon is read from the hardware (`hw.optional.arm64`), so a Terminal under Rosetta passes. A user who is not an admin stops at `Rosetta 2 · admin`. Stop lines are labels and data, no sentences (`game running`, `declined`, `game · not installed · SteamCMD 5`).
+- Found by the skeptics and confirmed by the judges: `update` also checks SteamCMD's exit code, because a failed sign-in leaves the old record at fully installed. The engine and libraries are replaced only through `swap`, which checks for a running game right before it deletes. A Mac without Rosetta always sees the y/n. Folders from before CW-09 with the pinned engine version are adopted, not downloaded again. The old-app cleanup compares folders, not names. `remove` takes only apps whose launcher starts this folder, and lists each one before the y/n. A folder of other files is never filled. The app checks run before the downloads.
+- `./carnival.sh --from FOLDER` copies the game from the person's own copy (a game folder, or a whole `~/.carnival`) and skips SteamCMD and the sign-in. `update` still goes through Steam.
+
+**Ruled by Claude, his to veto.** The y/n on the live rebuild was answered by Claude on his "go ahead" (20 nov 2026): the same pinned downloads he agreed to on 19 nov, and none was downloaded. The live app was started once to test it and closed with `wineserver -k` while he slept.
+
+## CW-09 · the seven holes from the review, fixed · 20 nov 2026
+
+**Ruled by Nevil, 19 nov 2026:** "Fix all 7".
+
+**What it means here.**
+1. An app is deleted only if it is ours: the path ends in `.app` and its Info.plist holds `local.carnival.roadrash`. Another app at the app path stops the flow. `remove` deletes a fixed list of names in the folder, needs `.consent` there, and never takes the home folder.
+2. SteamCMD runs with its own home, `~/.carnival/steamhome`. Its data and the saved sign-in stay in the folder, and `remove` takes them.
+3. The icon uses Python from `xcode-select -p`. `/usr/bin/python3` is Apple's stub, and on a Mac without developer tools it opens an install window.
+4. The Windows folder reads back all three settings (`gdi`, Windows 7, the game's registry entry) before its marker is written.
+5. The game counts as installed when SteamCMD's record says `StateFlags 4` and the exe is there. `update` stops when SteamCMD fails (exit code, CW-10) or does not finish. A start from the app writes `~/.carnival/play.log`.
+6. Markers keep fingerprints: `.consent` of the download list, `.tuned` of the `prefix` step, `.sha` of each pin. A changed step runs again. The flow stops while the game runs, because it can now replace the engine.
+7. The app's launcher carries `CARNIVAL_ROOT`.
+
+**Ruled by Claude, his to veto.** The sign-in from earlier runs stays in `~/Library/Application Support/Steam`. The script never deletes that folder, because a Mac Steam app may own it. On the test Mac it is SteamCMD's only, so deleting it is his call. The first full run after this change asks the y/n again and sets the Windows folder again, once, because the old markers hold no fingerprint. (The 268 MB download again was dropped in CW-10: old folders are adopted.)
+
+**Flagged for record only.** The small points from the review were left open here and fixed in CW-10.
+
 ## CW-08 · the app lives in /Applications, one file starts the flow · 19 nov 2026
 
 **Ruled by Nevil, 19 nov 2026:** "Yes, move it · and test · and pack it all up · and retest · so that it is a single click complete flow".
