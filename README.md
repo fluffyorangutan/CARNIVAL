@@ -34,7 +34,7 @@ Then it makes `~/Applications/Road Rash.app` and opens the game. After that, ope
 3. Downloads SteamCMD for Mac.
 4. Makes a Windows folder (a Wine prefix) in `~/.crimewave/prefix`. Sets Windows 7, the renderer `gdi` and the game's registry entry.
 5. SteamCMD downloads the Windows game files, 3.4 GB, with your sign-in.
-6. Writes `Road Rash.app`. It starts `RoadRash95.exe` in Wine.
+6. Writes `Road Rash.app`, with the icon from your own game files. It starts `RoadRash95.exe` in Wine.
 
 The Steam app is not installed and does not run. The game starts without it.
 
@@ -68,14 +68,14 @@ The Steam app is not installed and does not run. The game starts without it.
 
 ## the first way, kept for the record
 
-The first working setup used the Steam app inside a Sikarugir wrapper. It needed clicks and had more faults: Steam error 0x3008 on macOS 27, "Failed unpacking chunk" in Steam's own download, a microphone prompt that came back, and a wrapper build that waits while another wrapper runs. It is in the git history, commit `504edb5`.
+The first working setup used the Steam app inside a Sikarugir wrapper. It needed clicks and had more faults: Steam error 0x3008 on macOS 27, "Failed unpacking chunk" in Steam's own download, a microphone prompt that came back, and a wrapper build that waits while another wrapper runs. It is in the git history, commit `504edb5`. Its files were deleted from the test Mac on 19 nov 2026.
 
 ## limits
 
 - **Updates.** Run `./crimewave.sh update`.
 - **Steam features.** The Steam app does not run, so the Steam overlay, cloud saves and achievements are not expected to work. Not checked.
 - **Videos.** The intro and cut-scene videos are not checked.
-- **The app icon.** owed · it has none.
+- **The app icon.** The script reads it from the game's own `RoadRash95.exe` (48 by 48, scaled with hard pixels). It needs `/usr/bin/python3`, which comes with Apple's command line tools. Without it the app has no icon and still works.
 - **Space.** The game is 3.4 GB. The engine and libraries are 268 MB as downloads. owed · the size on disk.
 
 ## never share the folder

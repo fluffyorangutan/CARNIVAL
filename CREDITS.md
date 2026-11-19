@@ -5,7 +5,7 @@
 | what | who | licence |
 |---|---|---|
 | the idea, the test Mac, every decision | Nevil Hitesh | MIT · [LICENSES/MIT.txt](LICENSES/MIT.txt) |
-| `crimewave.sh`, the README, this file, the project files | written by Claude (AI: Opus 5.5 and Fable 5.2, Anthropic) on his ask · 19 nov 2026 | MIT |
+| `crimewave.sh`, `icon.py`, the README, this file, the project files | written by Claude (AI: Opus 5.5 and Fable 5.2, Anthropic) on his ask · 19 nov 2026 | MIT |
 
 ## taken in
 
@@ -24,7 +24,8 @@ Nothing is copied into this repo. The script downloads each item on the person's
 | what | status |
 |---|---|
 | fonts | none used |
-| photographs, icons, sounds, data | none used |
+| photographs, sounds, data | none used |
+| the app icon | read from the person's own `RoadRash95.exe` on their Mac · Electronic Arts · not in this repo |
 
 ## sources for the fixes
 

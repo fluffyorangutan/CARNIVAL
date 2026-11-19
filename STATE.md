@@ -1,13 +1,13 @@
 # state · crimewave
 
-> Last written 19 nov 2026 , later (the one flow, CW-04). Before that 19 nov 2026 (the repo made).
+> Last written 19 nov 2026 , later still (icon, old setup deleted, CW-06). Before that 19 nov 2026 (the repo made).
 
 ## now
 
 | thing | status |
 |---|---|
 | `./crimewave.sh` from an empty `~/.crimewave` | ran with no clicks on the test Mac · 19 nov 2026 |
-| `Road Rash.app` | starts the game process, no Steam process |
+| `Road Rash.app` | starts the game process, no Steam process · icon from the game's exe |
 | picture, sound, full screen from the new app | yes · Nevil, 19 nov 2026 |
 | `check` · a "no" at the y/n | tested |
 | `update` · `remove` · the Rosetta line · the password and code path | not tested |
@@ -15,7 +15,6 @@
 
 ## next
 
-- An icon for the app.
 - A second Mac.
 
 ## blocked on nevil
@@ -24,7 +23,6 @@
 |---|---|---|
 | 2 | going public | his word to make a GitHub repo and push. |
 | 3 | the repo name | `crimewave` is his wrapper name. His yes or another name. |
-| 4 | the old setup | `~/Applications/Sikarugir/crimewave.app` and `crimewave2.app`, `~/steamcmd`, Sikarugir Creator. Keep or delete, his call. About 4 GB for the first wrapper. |
 
 ## handoff notes
 

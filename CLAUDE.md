@@ -24,4 +24,3 @@ A recipe that runs Road Rash 30th Anniversary Edition (Steam, Windows) on an App
 |---|---|
 | the one flow's folder | `~/.crimewave` (engine, libraries, prefix, game, SteamCMD, a copy of the script) |
 | the app | `~/Applications/Road Rash.app` → `~/.crimewave/crimewave.sh play` |
-| the first way, still on disk | `~/Applications/Sikarugir/crimewave.app` · `crimewave2.app` · `~/steamcmd` |

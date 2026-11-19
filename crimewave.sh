@@ -147,9 +147,25 @@ EOF
 <key>CFBundleExecutable</key><string>roadrash</string>
 <key>CFBundlePackageType</key><string>APPL</string>
 <key>CFBundleVersion</key><string>1</string>
+<key>CFBundleIconFile</key><string>icon</string>
 <key>LSUIElement</key><true/>
 </dict></plist>
 EOF
+  icon
+}
+
+# the icon comes from the person's own game files. the repo holds no icon.
+icon() {
+  local py="${SELF:h}/icon.py" t="$ROOT/tmp_icon"
+  [[ -f "$py" ]] && cp "$py" "$ROOT/icon.py" 2>/dev/null
+  [[ -x /usr/bin/python3 && -f "$ROOT/icon.py" ]] || { say "icon · skipped"; return; }
+  rm -rf "$t" && mkdir -p "$t" "$APPDIR/Contents/Resources"
+  /usr/bin/python3 "$ROOT/icon.py" png "$GAME/RoadRash95.exe" "$t/i.png" 2>/dev/null \
+    && sips -p 512 512 "$t/i.png" --out "$t/i512.png" >/dev/null 2>&1 \
+    && sips -s format icns "$t/i512.png" --out "$APPDIR/Contents/Resources/icon.icns" >/dev/null 2>&1 \
+    || say "icon · skipped"
+  rm -rf "$t"
+  touch "$APPDIR"
 }
 
 play() {

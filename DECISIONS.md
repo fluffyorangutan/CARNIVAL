@@ -2,6 +2,14 @@
 
 Append only. Numbered `CW-nn`. Newest first.
 
+## CW-06 · the icon is read from the game, the old setup is deleted · 19 nov 2026
+
+**His words, 19 nov 2026.** "icon will be the roadrash icon right?" · "isn't the newer better? why keep old?? maybe just for record" · then "Yes, delete it".
+
+**What it means here.** `icon.py` reads the icon out of the person's own `RoadRash95.exe`; the repo holds no icon, because Electronic Arts owns it. The first way's files are deleted from the test Mac (two Sikarugir wrappers, `~/steamcmd`, Sikarugir Creator, its cache; 7 GB freed). The record of the first way is commit `504edb5`.
+
+**Flagged for record only.** The script is for this one game. `gdi`, the registry entry and the start with no Steam app do not carry to other games.
+
 ## CW-05 · MIT, ruled · 19 nov 2026
 
 **Ruled by Nevil, 19 nov 2026:** "MIT yes". CW-02 was Claude's pick; it is now his ruling.
