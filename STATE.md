@@ -29,4 +29,4 @@
 - In zsh, `$0` inside a function is the function's name. The script reads its own path once, at the top, as `SELF`.
 - `game_running` matches any `RoadRash95.exe`, from this folder or from an old wrapper.
 - Making a Sikarugir wrapper waits while another wrapper runs (seen 19 nov 2026, 32 minutes). The one flow does not use the Creator.
-- The test Mac still runs from `~/.crimewave` and the old app (19 nov 2026). The game was open at the rename. owed · with the game closed: move `~/.crimewave` to `~/.carnival`, then run `./carnival.sh` to write the app again.
+- The test Mac moved from `~/.crimewave` to `~/.carnival` on 19 nov 2026. A direct start from the new folder works. owed · one start from `Road Rash.app` after the move, seen by Nevil.
