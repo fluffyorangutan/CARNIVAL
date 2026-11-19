@@ -8,14 +8,13 @@
 |---|---|
 | `./crimewave.sh` from an empty `~/.crimewave` | ran with no clicks on the test Mac · 19 nov 2026 |
 | `Road Rash.app` | starts the game process, no Steam process |
-| picture, sound, full screen from the new app | owed · Nevil's look |
+| picture, sound, full screen from the new app | yes · Nevil, 19 nov 2026 |
 | `check` · a "no" at the y/n | tested |
 | `update` · `remove` · the Rosetta line · the password and code path | not tested |
 | remote | none · local commits only |
 
 ## next
 
-- His look at the new app: picture, sound, full screen.
 - An icon for the app.
 - A second Mac.
 

@@ -10,7 +10,7 @@ Append only. Numbered `CW-nn`. Newest first.
 
 **What stays with the person, Claude's line.** One y/n before the downloads (CW-03, now one question for the whole list). The Steam sign-in, typed into SteamCMD by the person. A script does not type a password.
 
-**Flagged for record only.** Full screen is the game's own default; the script does not set it. Not confirmed by eye yet.
+**Flagged for record only.** Full screen is the game's own default; the script does not set it. Confirmed by Nevil, 19 nov 2026: full screen, picture, sound.
 
 ## CW-03 · each download asks, then the script links to the game · 19 nov 2026
 

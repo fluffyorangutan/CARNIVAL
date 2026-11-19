@@ -54,7 +54,7 @@ The Steam app is not installed and does not run. The game starts without it.
 | steps 1 to 6 from an empty `~/.crimewave` | ran with no clicks · Rosetta was already there, so that line is not tested |
 | sign-in | SteamCMD used a saved sign-in · the password and code path is SteamCMD's own, not re-tested in this flow |
 | the app | starts the game process, no Steam process |
-| picture, sound, full screen from the new app | owed · one look by a person |
+| picture, sound, full screen from the new app | yes · Nevil, 19 nov 2026 |
 | a second Mac | owed |
 
 ## why each setting is there
