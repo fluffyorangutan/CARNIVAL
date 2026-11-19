@@ -1,14 +1,14 @@
 #!/bin/zsh
-# crimewave · Road Rash 30th Anniversary Edition (Steam, Windows) on an Apple silicon Mac
+# CARNIVAL · Road Rash 30th Anniversary Edition (Steam, Windows) on an Apple silicon Mac
 # MIT · LICENSES/MIT.txt · written by Claude (AI) on Nevil Hitesh's ask · 19 nov 2026
-# use: ./crimewave.sh            one flow: tools, game, app, play
-#      ./crimewave.sh play | update | check | remove
+# use: ./carnival.sh            one flow: tools, game, app, play
+#      ./carnival.sh play | update | check | remove
 
 set -u
 SELF="${0:A}"
 
-ROOT="${CRIMEWAVE_ROOT:-$HOME/.crimewave}"
-APPDIR="${CRIMEWAVE_APP:-$HOME/Applications/Road Rash.app}"
+ROOT="${CARNIVAL_ROOT:-$HOME/.carnival}"
+APPDIR="${CARNIVAL_APP:-$HOME/Applications/Road Rash.app}"
 FW="$ROOT/Frameworks"
 WINE="$ROOT/wine"
 PFX="$ROOT/prefix"
@@ -129,13 +129,13 @@ game() { # $1 = force
 
 app() {
   say "app"
-  [[ "$SELF" == "$ROOT/crimewave.sh" ]] || cp "$SELF" "$ROOT/crimewave.sh" || stop "could not copy the script"
-  chmod +x "$ROOT/crimewave.sh"
+  [[ "$SELF" == "$ROOT/carnival.sh" ]] || cp "$SELF" "$ROOT/carnival.sh" || stop "could not copy the script"
+  chmod +x "$ROOT/carnival.sh"
   rm -rf "$APPDIR"
   mkdir -p "$APPDIR/Contents/MacOS"
   cat > "$APPDIR/Contents/MacOS/roadrash" <<EOF
 #!/bin/zsh
-exec "$ROOT/crimewave.sh" play
+exec "$ROOT/carnival.sh" play
 EOF
   chmod +x "$APPDIR/Contents/MacOS/roadrash"
   cat > "$APPDIR/Contents/Info.plist" <<'EOF'
@@ -143,7 +143,7 @@ EOF
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0"><dict>
 <key>CFBundleName</key><string>Road Rash</string>
-<key>CFBundleIdentifier</key><string>local.crimewave.roadrash</string>
+<key>CFBundleIdentifier</key><string>local.carnival.roadrash</string>
 <key>CFBundleExecutable</key><string>roadrash</string>
 <key>CFBundlePackageType</key><string>APPL</string>
 <key>CFBundleVersion</key><string>1</string>
@@ -169,7 +169,7 @@ icon() {
 }
 
 play() {
-  [[ -f "$GAME/RoadRash95.exe" ]] || stop "not installed · run ./crimewave.sh"
+  [[ -f "$GAME/RoadRash95.exe" ]] || stop "not installed · run ./carnival.sh"
   game_running && exit 0
   wine_env
   cd "$GAME" && exec "$WINE/bin/wine" RoadRash95.exe >/dev/null 2>&1
@@ -217,5 +217,5 @@ all() {
 case "${1:-all}" in
   all|play|check|remove) "${1:-all}" ;;
   update) game force ;;
-  *) say "use: ./crimewave.sh [play | update | check | remove]" ;;
+  *) say "use: ./carnival.sh [play | update | check | remove]" ;;
 esac

@@ -1,6 +1,14 @@
-# decisions · crimewave
+# decisions · CARNIVAL
 
-Append only. Numbered `CW-nn`. Newest first.
+Append only. Numbered `CW-nn` (from the first name, crimewave). Newest first.
+
+## CW-07 · the name is CARNIVAL, the repo is private on GitHub · 19 nov 2026
+
+**Ruled by Nevil, 19 nov 2026:** "push it to github, private srill · name: CARNIVAL".
+
+**What it means here.** The repo, the folder `_yussuf/CARNIVAL`, the script `carnival.sh` and the home folder `~/.carnival` take the name. Entries below keep the old words: `crimewave.sh`, `~/.crimewave`. Private on GitHub; public is a new ruling.
+
+**Ruled by Claude, his to veto.** The game's files never ship in the repo, private or public. Each person's copy comes from their own Steam account through SteamCMD.
 
 ## CW-06 · the icon is read from the game, the old setup is deleted · 19 nov 2026
 

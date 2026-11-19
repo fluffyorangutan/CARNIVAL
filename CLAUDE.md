@@ -1,4 +1,4 @@
-# crimewave · anchor
+# CARNIVAL · anchor
 
 A recipe that runs Road Rash 30th Anniversary Edition (Steam, Windows) on an Apple silicon Mac. One script, one README. Made 19 nov 2026.
 
@@ -15,12 +15,12 @@ A recipe that runs Road Rash 30th Anniversary Edition (Steam, Windows) on an App
 - **A script never types a password.** The Steam sign-in is the person's, in SteamCMD.
 - **Each claim says if it is tested.** The README's `tested on` and `limits` tables are the record. Update them with every change.
 - **Never kill a process while Nevil plays.** Two stops on 19 nov 2026 closed his sign-in and his game.
-- **Not pushed.** A push to a public remote is Nevil's call, each time.
+- **Private on GitHub.** Making it public is Nevil's call.
 - Global laws apply: no em dashes · lowercase headers · facts or an `owed ·` slot · CREDITS.md stays complete.
 
 ## the test Mac
 
 | thing | value |
 |---|---|
-| the one flow's folder | `~/.crimewave` (engine, libraries, prefix, game, SteamCMD, a copy of the script) |
-| the app | `~/Applications/Road Rash.app` → `~/.crimewave/crimewave.sh play` |
+| the one flow's folder | `~/.carnival` (engine, libraries, prefix, game, SteamCMD, a copy of the script) |
+| the app | `~/Applications/Road Rash.app` → `~/.carnival/carnival.sh play` |

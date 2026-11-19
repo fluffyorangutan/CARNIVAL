@@ -1,4 +1,4 @@
-# crimewave
+# CARNIVAL
 
 Road Rash 30th Anniversary Edition is a Windows game on Steam. One command puts it on an Apple silicon Mac as an app.
 
@@ -7,7 +7,7 @@ Road Rash 30th Anniversary Edition is a Windows game on Steam. One command puts 
 ## use
 
 ```bash
-./crimewave.sh
+./carnival.sh
 ```
 
 It asks two things. All other steps run by themselves.
@@ -21,18 +21,18 @@ Then it makes `~/Applications/Road Rash.app` and opens the game. After that, ope
 
 | command | what |
 |---|---|
-| `./crimewave.sh` | the whole flow · safe to run again, it skips what is done |
-| `./crimewave.sh play` | start the game |
-| `./crimewave.sh update` | download the game again with SteamCMD |
-| `./crimewave.sh check` | show the state · changes nothing |
-| `./crimewave.sh remove` | delete `~/.crimewave` and the app, after a y/n |
+| `./carnival.sh` | the whole flow · safe to run again, it skips what is done |
+| `./carnival.sh play` | start the game |
+| `./carnival.sh update` | download the game again with SteamCMD |
+| `./carnival.sh check` | show the state · changes nothing |
+| `./carnival.sh remove` | delete `~/.carnival` and the app, after a y/n |
 
 ## what it does
 
 1. Rosetta 2, if missing.
 2. Downloads the Wine engine `WS12WineCX24.0.7_7` and the libraries from Sikarugir Template 1.0.27. Both are checked against a SHA-256.
 3. Downloads SteamCMD for Mac.
-4. Makes a Windows folder (a Wine prefix) in `~/.crimewave/prefix`. Sets Windows 7, the renderer `gdi` and the game's registry entry.
+4. Makes a Windows folder (a Wine prefix) in `~/.carnival/prefix`. Sets Windows 7, the renderer `gdi` and the game's registry entry.
 5. SteamCMD downloads the Windows game files, 3.4 GB, with your sign-in.
 6. Writes `Road Rash.app`, with the icon from your own game files. It starts `RoadRash95.exe` in Wine.
 
@@ -51,7 +51,7 @@ The Steam app is not installed and does not run. The game starts without it.
 | what | result |
 |---|---|
 | a "no" at the y/n | stops, nothing downloaded |
-| steps 1 to 6 from an empty `~/.crimewave` | ran with no clicks · Rosetta was already there, so that line is not tested |
+| steps 1 to 6 from an empty `~/.carnival` | ran with no clicks · Rosetta was already there, so that line is not tested |
 | sign-in | SteamCMD used a saved sign-in · the password and code path is SteamCMD's own, not re-tested in this flow |
 | the app | starts the game process, no Steam process |
 | picture, sound, full screen from the new app | yes · Nevil, 19 nov 2026 |
@@ -72,7 +72,7 @@ The first working setup used the Steam app inside a Sikarugir wrapper. It needed
 
 ## limits
 
-- **Updates.** Run `./crimewave.sh update`.
+- **Updates.** Run `./carnival.sh update`.
 - **Steam features.** The Steam app does not run, so the Steam overlay, cloud saves and achievements are not expected to work. Not checked.
 - **Videos.** The intro and cut-scene videos are not checked.
 - **The app icon.** The script reads it from the game's own `RoadRash95.exe` (48 by 48, scaled with hard pixels). It needs `/usr/bin/python3`, which comes with Apple's command line tools. Without it the app has no icon and still works.
@@ -80,7 +80,7 @@ The first working setup used the Steam app inside a Sikarugir wrapper. It needed
 
 ## never share the folder
 
-`~/.crimewave` holds the game. Share this repo, not the folder.
+`~/.carnival` holds the game. Share this repo, not the folder.
 
 ## how open is it
 

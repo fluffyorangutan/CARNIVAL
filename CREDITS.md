@@ -1,11 +1,11 @@
-# credits · crimewave
+# credits · CARNIVAL
 
 ## who
 
 | what | who | licence |
 |---|---|---|
 | the idea, the test Mac, every decision | Nevil Hitesh | MIT · [LICENSES/MIT.txt](LICENSES/MIT.txt) |
-| `crimewave.sh`, `icon.py`, the README, this file, the project files | written by Claude (AI: Opus 5.5 and Fable 5.2, Anthropic) on his ask · 19 nov 2026 | MIT |
+| `carnival.sh`, `icon.py`, the README, this file, the project files | written by Claude (AI: Opus 5.5 and Fable 5.2, Anthropic) on his ask · 19 nov 2026 | MIT |
 
 ## taken in
 

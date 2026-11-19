@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# crimewave · reads the largest icon out of a Windows exe or dll and writes a PNG
+# CARNIVAL · reads the largest icon out of a Windows exe or dll and writes a PNG
 # MIT · written by Claude (AI) on Nevil Hitesh's ask · 19 nov 2026
 # use: icon.py list FILE...          show the icons in each file
 #      icon.py png FILE OUT.png      write the best icon, scaled up with hard pixels
