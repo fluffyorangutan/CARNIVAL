@@ -10,7 +10,7 @@
 | `~/.carnival` | every `check` row yes · engine and libraries adopted (no download) · Windows folder set again · 20 nov 2026 |
 | the review fixes (CW-09, CW-10) | 5 skeptics, 4 judges, 112 tests, then a 24-check gate in scratch: all passed · 20 nov 2026 |
 | a flow from an empty folder | passed in scratch with the real downloads and `--from` · 171 s · the Steam download itself not run |
-| `--from FOLDER` | tested from the live `~/.carnival` · 20 nov 2026 |
+| `--from FOLDER` | tested from the live `~/.carnival` and from the Proton zip into a scratch home (179 s) · 20 nov 2026 |
 | picture, sound, full screen | the app opens · Nevil, 20 nov 2026 · picture, sound and full screen not re-confirmed after the rebuild |
 | `update` with the password and code | owed · the new SteamCMD home is empty, so the next `update` asks for both once |
 | a Mac without developer tools | simulated only |
@@ -19,7 +19,7 @@
 ## next
 
 - Nevil: his save file from before is not in the app. The old folders held none. Treated as fine (Nevil, 20 nov 2026).
-- A second Mac (M1 Pro): run the one line from the README. Report the last lines, picture and sound. Owed.
+- A second Mac (M1 Pro): two ways owed. (1) the one line from the README, with Steam. (2) the line in the Proton note, no Steam. Report the last lines, picture and sound.
 
 ## blocked on nevil
 
@@ -27,6 +27,8 @@
 |---|---|---|
 
 ## handoff notes
+
+- The game copy for `--from` sits in Proton Drive, folder `Road Rash` (zip plus note, CW-12). macOS blocks listing that folder, but writing works. Never put it in the repo.
 
 - Wine commands need the variables in `wine_env`. `nohup` strips the `DYLD` one.
 - In zsh, `$0` inside a function is the function's name. The script reads its own path once, at the top, as `SELF`.

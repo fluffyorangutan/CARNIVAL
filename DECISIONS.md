@@ -3,6 +3,17 @@
 Append only. Numbered `CW-nn` (from the first name, crimewave). Newest first.
 
 
+## CW-12 · a private copy of the game in Proton Drive, for --from · 20 nov 2026
+
+**Ruled by Nevil, 20 nov 2026:** "A, plain zip, with a .txt file with the --from line also in it". His aim: fewer Steam points of failure.
+
+**What it means here.** `Road Rash game.zip` (3.2 GB, the game folder from `~/.carnival`) and `READ ME.txt` sit in his Proton Drive, folder `Road Rash`. Proton encrypts it; no passcode on top. The note holds one line: fetch the recipe, unzip the game, run `carnival.sh --from`. Tested from the zip into a scratch home: 179 s, no Steam, every `check` row yes, `game files · from a copy`.
+
+**Never in the repo.** The game is Electronic Arts' work and the repo is public (CW-11). `.gitignore` already blocks `*.exe`. The zip is for his own Macs only, as the README limit says.
+
+**Flagged for record only.** I could not list the Proton folder (macOS blocks the listing), so I did not see the upload finish. The Proton Drive app shows it.
+
+
 ## CW-11 · the repo is public, one line installs it · 20 nov 2026
 
 **Ruled by Nevil, 20 nov 2026:** "let's try both" (the zip and the public one-line way).
