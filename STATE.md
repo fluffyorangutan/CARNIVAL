@@ -14,14 +14,13 @@
 | picture, sound, full screen | yes · Nevil, 19 nov 2026 · not seen again after the rebuild · owed · his first click |
 | `update` with the password and code | owed · the new SteamCMD home is empty, so the next `update` asks for both once |
 | a Mac without developer tools | simulated only |
-| remote | GitHub · private · `CARNIVAL` · the CW-09 and CW-10 commit is local, not pushed |
+| remote | GitHub · private · `CARNIVAL` · the CW-09 and CW-10 commit pushed · 20 nov 2026 |
 
 ## next
 
 - Nevil: open Road Rash from Applications. Say if the picture, sound and full screen still hold.
 - `~/.carnival.partial` (3.3 GB, the cut download of 19 nov) is no longer needed: `--from` covers the from-empty test. Delete it on his word.
 - The old sign-in in `~/Library/Application Support/Steam` (SteamCMD's, from before CW-09). Delete it on his word.
-- Push to GitHub on his word.
 - A second Mac: `./carnival.sh --from` a copy of `~/.carnival` on a drive, or the Steam sign-in.
 
 ## blocked on nevil
