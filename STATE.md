@@ -11,16 +11,14 @@
 | the review fixes (CW-09, CW-10) | 5 skeptics, 4 judges, 112 tests, then a 24-check gate in scratch: all passed · 20 nov 2026 |
 | a flow from an empty folder | passed in scratch with the real downloads and `--from` · 171 s · the Steam download itself not run |
 | `--from FOLDER` | tested from the live `~/.carnival` · 20 nov 2026 |
-| picture, sound, full screen | yes · Nevil, 19 nov 2026 · not seen again after the rebuild · owed · his first click |
+| picture, sound, full screen | the app opens · Nevil, 20 nov 2026 · picture, sound and full screen not re-confirmed after the rebuild |
 | `update` with the password and code | owed · the new SteamCMD home is empty, so the next `update` asks for both once |
 | a Mac without developer tools | simulated only |
 | remote | GitHub · private · `CARNIVAL` · the CW-09 and CW-10 commit pushed · 20 nov 2026 |
 
 ## next
 
-- Nevil: open Road Rash from Applications. Say if the picture, sound and full screen still hold.
-- `~/.carnival.partial` (3.3 GB, the cut download of 19 nov) is no longer needed: `--from` covers the from-empty test. Delete it on his word.
-- The old sign-in in `~/Library/Application Support/Steam` (SteamCMD's, from before CW-09). Delete it on his word.
+- Nevil: his save file from before is not in the app. The old folders held none. Treated as fine (Nevil, 20 nov 2026).
 - A second Mac: `./carnival.sh --from` a copy of `~/.carnival` on a drive, or the Steam sign-in.
 
 ## blocked on nevil
@@ -28,7 +26,6 @@
 | # | thing | what is needed |
 |---|---|---|
 | 1 | going public | the repo is private on GitHub. His word to make it public. |
-| 2 | two old folders | `~/.carnival.partial` and `~/Library/Application Support/Steam`: delete or keep |
 
 ## handoff notes
 

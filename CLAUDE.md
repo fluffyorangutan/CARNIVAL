@@ -27,4 +27,3 @@ A recipe that runs Road Rash 30th Anniversary Edition (Steam, Windows) on an App
 |---|---|
 | the one flow's folder | `~/.carnival` (engine, libraries, prefix, game, SteamCMD and its home with the sign-in, a copy of the script, `play.log`) |
 | the app | `/Applications/Road Rash.app` → `~/.carnival/carnival.sh play` |
-| the old sign-in | `~/Library/Application Support/Steam` · SteamCMD's, from runs before CW-09 · his to delete |
