@@ -57,6 +57,19 @@ wine_env() {
   export WINEMSYNC=1 WINEESYNC=1 WINEDEBUG=-all
 }
 w() { "$WINE/bin/wine" "$@"; }
+# waits for the Windows processes to end, 60 s at most. two helpers can stay alive for ever (seen on 20 nov 2026, twice),
+# and a plain wait never ends. after 60 s the wineserver is stopped the clean way, which saves the registry first.
+wine_idle() {
+  "$WINE/bin/wineserver" -w &
+  local p=$! i
+  for i in {1..60}; do
+    kill -0 $p 2>/dev/null || { wait $p 2>/dev/null; return 0; }
+    sleep 1
+  done
+  "$WINE/bin/wineserver" -k 2>/dev/null
+  wait $p 2>/dev/null
+  return 0
+}
 # reads the program name only. a shell line that holds the name does not count.
 # the engine starts each Windows program from a link named after its exe, so the name is the exe's.
 game_running() { ps -axo comm= | grep -q 'RoadRash95\.exe$'; }
@@ -68,7 +81,7 @@ rosetta() { arch -x86_64 /usr/bin/true 2>/dev/null; }
 fingerprint() { print -rn -- "$1" | shasum -a 256 | cut -c1-16; }
 consent_fp() { fingerprint "${(F)ROWS} $ENGINE_SHA $TEMPLATE_SHA"; }
 # the Windows folder step: prefix and every helper it uses
-tune_fp() { fingerprint "${functions[prefix]}${functions[reg_import]}${functions[wine_env]}${functions[w]}${functions[regval]}${functions[settings_ok]} $ENGINE_SHA $TEMPLATE_SHA"; }
+tune_fp() { fingerprint "${functions[prefix]}${functions[reg_import]}${functions[wine_env]}${functions[w]}${functions[wine_idle]}${functions[regval]}${functions[settings_ok]} $ENGINE_SHA $TEMPLATE_SHA"; }
 tuned() { local f="$(tune_fp)"; [[ -n "$f" && "$(cat "$PFX/.tuned" 2>/dev/null)" == "$f" ]] && settings_ok; }
 # a downloaded folder keeps the SHA-256 it came from. a new pin or a broken folder fetches again.
 pinned() { [[ "$(cat "$1/.sha" 2>/dev/null)" == "$2" ]]; }
@@ -210,7 +223,7 @@ prefix() {
   reg_import '[HKEY_LOCAL_MACHINE\Software\Wow6432Node\Electronic Arts\RoadRash 95]
 "path"="C:\\Games\\RoadRash"
 "language"="English"'
-  "$WINE/bin/wineserver" -w
+  wine_idle
   # all three settings are read back. if one is missing, no marker is written and the next run tries again.
   settings_ok || stop "Windows folder · $(renderer) · $(winver)"
   local f="$(tune_fp)"

@@ -7,11 +7,24 @@ Append only. Numbered `CW-nn` (from the first name, crimewave). Newest first.
 
 **Ruled by Nevil, 20 nov 2026:** "A, plain zip, with a .txt file with the --from line also in it". His aim: fewer Steam points of failure.
 
-**What it means here.** `Road Rash game.zip` (3.2 GB, the game folder from `~/.carnival`) and `READ ME.txt` sit in his Proton Drive, folder `Road Rash`. Proton encrypts it; no passcode on top. The note holds one line: fetch the recipe, unzip the game, run `carnival.sh --from`. Tested from the zip into a scratch home: 179 s, no Steam, every `check` row yes, `game files · from a copy`.
+**What it means here.** The game folder from `~/.carnival` (3.2 GB, zipped) sits in his Proton Drive, folder `Road Rash`, as 11 pieces in `pieces/` (10 of 300 MB, one of 262 MB), with `READ ME.txt`. Proton encrypts it; no passcode on top. The note holds one line: fetch the recipe, join the pieces, check the SHA-256, unzip, run `carnival.sh --from`. The line stops with `pieces · checksum wrong` if a piece is missing or cut.
 
-**Never in the repo.** The game is Electronic Arts' work and the repo is public (CW-11). `.gitignore` already blocks `*.exe`. The zip is for his own Macs only, as the README limit says.
+**Why pieces.** One 3.2 GB file failed twice through rclone's Proton backend (a block rejected as empty, speed falling to 50 KiB/s), and the Proton Drive app left a stuck draft. Plain 300 MB pieces uploaded with 3 tries each, up to four at once. rclone's own `chunker` could split too, but the new Mac would then need rclone. Plain pieces need nothing (Nevil asked, 20 nov 2026; kept the plain pieces).
 
-**Flagged for record only.** I could not list the Proton folder (macOS blocks the listing), so I did not see the upload finish. The Proton Drive app shows it.
+**Tested.** All 11 sizes on Proton match the local pieces. The pieces were downloaded back, joined, and the SHA-256 equals the zip's (`6a3fdc91…b352b5`). The note's exact line ran in a scratch home with the pieces in `~/Downloads/pieces`: no Steam, every `check` row yes, `game files · from a copy`, the app made. That run took 3713 s because of CW-13.
+
+**Never in the repo.** The game is Electronic Arts' work and the repo is public (CW-11). `.gitignore` already blocks `*.exe`. The pieces are for his own Macs only, as the README limit says.
+
+**Flagged for record only.** macOS blocks listing the Proton sync folder, so the upload was done and checked with `rclone` (`proton:` remote). A shared Mac load (the Xbox download, other sessions' jobs) slowed it.
+
+
+## CW-13 · the Windows-folder step no longer waits for ever · 20 nov 2026
+
+**Found by Claude, 20 nov 2026.** Two runs of the flow hung for 2 hours and 1 hour at the Windows folder step. The script ran `wineserver -w`, which has no time limit. Two helper processes (`services.exe`, `explorer.exe`) stayed alive, so it never returned. Stopping that wineserver by hand made the script finish with all three settings intact.
+
+**What it means here.** `wine_idle` waits 60 s at most, then stops the wineserver the clean way (`wineserver -k`, which saves the registry), then goes on. `settings_ok` still reads all three settings back, so a bad state still stops the flow. The helper joins the `.tuned` fingerprint, so an old install sets its Windows folder once more. Tested: a fake wineserver that never ends returns after 67 s; one that ends returns at once; the full 19-line gate passed.
+
+**Flagged for record only.** The cause of the helpers staying alive is not known. It showed on a heavily loaded Mac. A `timeout` binary cannot wrap wine commands: it strips the `DYLD` variable.
 
 
 ## CW-11 · the repo is public, one line installs it · 20 nov 2026

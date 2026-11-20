@@ -74,6 +74,8 @@ The Steam app is not installed and does not run. The game starts without it.
 | SteamCMD's own home | a copy of SteamCMD wrote its data under the home it was given, and `~/Library/Application Support/Steam` did not change · 20 nov 2026 |
 | a Mac with no developer tools | simulated only (xcode-select made to fail): the icon is skipped and no install window opens |
 | the sign-in in the new SteamCMD home, with password and code | owed · the next `update` asks for both once |
+| `--from` with the game joined from 11 downloaded pieces | the pieces were joined, the SHA-256 matched, and the flow ended with every `check` row yes and the app made · scratch home · 20 nov 2026 |
+| the Windows-folder step on a busy Mac | hung twice with no time limit · now waits 60 s, then stops the Wine server cleanly (CW-13) · a fake hanging server returned after 67 s · the 19-line gate passed · 20 nov 2026 |
 | a second Mac | owed |
 
 ## why each setting is there

@@ -1,6 +1,6 @@
 # state · CARNIVAL
 
-> Last written 20 nov 2026 (the review fixes CW-09, the small points and `--from` CW-10, the live rebuild). Before that 19 nov 2026 (CW-08).
+> Last written 20 nov 2026 (the game in 11 pieces on Proton CW-12, the wineserver wait fix CW-13). Before that: the review fixes CW-09, CW-10.
 
 ## now
 
@@ -10,16 +10,17 @@
 | `~/.carnival` | every `check` row yes · engine and libraries adopted (no download) · Windows folder set again · 20 nov 2026 |
 | the review fixes (CW-09, CW-10) | 5 skeptics, 4 judges, 112 tests, then a 24-check gate in scratch: all passed · 20 nov 2026 |
 | a flow from an empty folder | passed in scratch with the real downloads and `--from` · 171 s · the Steam download itself not run |
-| `--from FOLDER` | tested from the live `~/.carnival` and from the Proton zip into a scratch home (179 s) · 20 nov 2026 |
+| `--from FOLDER` | tested from the live `~/.carnival` and from the 11 Proton pieces joined in a scratch home · 20 nov 2026 |
 | picture, sound, full screen | the app opens · Nevil, 20 nov 2026 · picture, sound and full screen not re-confirmed after the rebuild |
 | `update` with the password and code | owed · the new SteamCMD home is empty, so the next `update` asks for both once |
 | a Mac without developer tools | simulated only |
+| the Windows-folder wait (CW-13) | fixed and tested in scratch · NOT pushed yet, so the one-line install on GitHub still has the old wait · 20 nov 2026 |
 | remote | GitHub · PUBLIC since 20 nov 2026 · `fluffyorangutan/CARNIVAL` · all commits pushed except the ones named in `git status` |
 
 ## next
 
 - Nevil: his save file from before is not in the app. The old folders held none. Treated as fine (Nevil, 20 nov 2026).
-- A second Mac (M1 Pro): two ways owed. (1) the one line from the README, with Steam. (2) the line in the Proton note, no Steam. Report the last lines, picture and sound.
+- Push the CW-13 fix, so the one-line install and the Proton note fetch the fixed script. Then the second Mac (M1 Pro): two ways owed. (1) the one line from the README, with Steam. (2) the line in the Proton note, no Steam. Report the last lines, picture and sound.
 
 ## blocked on nevil
 
@@ -28,7 +29,7 @@
 
 ## handoff notes
 
-- The game copy for `--from` sits in Proton Drive, folder `Road Rash` (zip plus note, CW-12). macOS blocks listing that folder, but writing works. Never put it in the repo.
+- The game copy for `--from` sits in Proton Drive, folder `Road Rash`: `pieces/` (11 files, plain) and `READ ME.txt` (CW-12). The Proton Drive app stalled on the 3.2 GB file; rclone (`proton:` remote, `--protondrive-replace-existing-draft=true`) uploaded the pieces. macOS blocks listing the sync folder. Never put it in the repo.
 
 - Wine commands need the variables in `wine_env`. `nohup` strips the `DYLD` one.
 - In zsh, `$0` inside a function is the function's name. The script reads its own path once, at the top, as `SELF`.
