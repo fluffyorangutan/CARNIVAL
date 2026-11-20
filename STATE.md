@@ -14,18 +14,17 @@
 | picture, sound, full screen | the app opens · Nevil, 20 nov 2026 · picture, sound and full screen not re-confirmed after the rebuild |
 | `update` with the password and code | owed · the new SteamCMD home is empty, so the next `update` asks for both once |
 | a Mac without developer tools | simulated only |
-| remote | GitHub · private · `CARNIVAL` · the CW-09 and CW-10 commit pushed · 20 nov 2026 |
+| remote | GitHub · PUBLIC since 20 nov 2026 · `fluffyorangutan/CARNIVAL` · all commits pushed except the ones named in `git status` |
 
 ## next
 
 - Nevil: his save file from before is not in the app. The old folders held none. Treated as fine (Nevil, 20 nov 2026).
-- A second Mac: `./carnival.sh --from` a copy of `~/.carnival` on a drive, or the Steam sign-in.
+- A second Mac (M1 Pro): run the one line from the README. Report the last lines, picture and sound. Owed.
 
 ## blocked on nevil
 
 | # | thing | what is needed |
 |---|---|---|
-| 1 | going public | the repo is private on GitHub. His word to make it public. |
 
 ## handoff notes
 

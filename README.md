@@ -6,7 +6,15 @@ Road Rash 30th Anniversary Edition is a Windows game on Steam. One double-click 
 
 ## use
 
-Double-click `CARNIVAL.command`. Terminal opens and runs the flow. The same from a shell:
+**On a Mac with nothing on it,** paste this one line into Terminal. It downloads the recipe into `~/CARNIVAL` and runs it. It needs only tools that ship with macOS.
+
+```bash
+mkdir -p ~/CARNIVAL && curl -fsSL https://github.com/fluffyorangutan/CARNIVAL/tarball/main | tar -xz --strip-components=1 -C ~/CARNIVAL && zsh ~/CARNIVAL/carnival.sh
+```
+
+Not tested on a second Mac yet. The download and unpack were tested in a scratch folder on 20 nov 2026.
+
+**With the files already on the Mac,** double-click `CARNIVAL.command`. Terminal opens and runs the flow. The same from a shell:
 
 ```bash
 ./carnival.sh

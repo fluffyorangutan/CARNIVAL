@@ -2,6 +2,15 @@
 
 Append only. Numbered `CW-nn` (from the first name, crimewave). Newest first.
 
+
+## CW-11 · the repo is public, one line installs it · 20 nov 2026
+
+**Ruled by Nevil, 20 nov 2026:** "let's try both" (the zip and the public one-line way).
+
+**What it means here.** The repo `fluffyorangutan/CARNIVAL` is public on GitHub. History was scanned first: no token, no Steam id, no real email (the author is a private relay address). A second Mac gets the files with one line: `curl` the GitHub tarball, `tar` it into `~/CARNIVAL`, run `carnival.sh`. All four tools ship with macOS, so no developer tools are needed. The `archive/refs/heads/main.tar.gz` link gave a web page right after the change, so the line uses `tarball/main`. A zip of the tracked files (`git archive`) is the fallback for AirDrop.
+
+**Flagged for record only.** The game, the Steam files and any sign-in still never ship (CW-01, CW-07). Public means the recipe only.
+
 ## CW-10 · the small points, the judges' finds, and --from · 20 nov 2026
 
 **Ruled by Nevil, 20 nov 2026:** "also fix the small ones" · "yes build the --from option too" · "you have bypass permissions on so just go ahead and do all the tests you need".

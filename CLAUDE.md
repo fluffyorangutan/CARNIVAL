@@ -18,7 +18,7 @@ A recipe that runs Road Rash 30th Anniversary Edition (Steam, Windows) on an App
 - **Never delete under a running game.** Engine and libraries change only through `swap`. Tests use `CARNIVAL_ROOT`, `CARNIVAL_APP` and `HOME` in scratch, and a stub `open`.
 - **Each claim says if it is tested.** The README's `tested on` and `limits` tables are the record. Update them with every change.
 - **Never kill a process while Nevil plays.** Two stops on 19 nov 2026 closed his sign-in and his game.
-- **Private on GitHub.** Making it public is Nevil's call.
+- **Public on GitHub since 20 nov 2026 (CW-11).** The repo holds the recipe only, never the game.
 - Global laws apply: no em dashes · lowercase headers · facts or an `owed ·` slot · CREDITS.md stays complete.
 
 ## the test Mac
